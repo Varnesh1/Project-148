@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <a-assets timeout = '1000'>
+            <a-asset-item src = './street_scene/scene.gltf' id = 'scene' >
+            </a-asset-item>
+            <a-asset-item src = './rigged_human_character_free/scene.gltf' id = 'person' >
+            </a-asset-item>
+            
+        </a-assets>
+      </head>
+      <body>
+<a-camera position = '0 50 50'></a-camera>
+        <a-scene background = 'color:blue'>
+
+<a-entity gltf-model = '#scene' position = '0 0 0' rotation = '0 0 0' scale = '1 1 1'></a-entity>
+<a-entity gltf-model = '#person' position = '5 0 2' rotation = '0 0 0' scale = '1 1 1' shadow = 'cast:true'></a-entity>
+
+<a-entity light = 'type: point; castShadow: true; color: #e6ca140; intensity : 10.35' position = '5 10 2'></a-entity>
+<a-entity light="'type:ambient;"></a-entity>
+
+
+
+
+
+        </a-scene>
+        
+      </body>
+</html>
